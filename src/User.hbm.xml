@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+ 
+    <class name="com.hibernate.pojo.User" table="users">
+         <id name="id" type="long" unsaved-value="null" >
+            <column name="user_id" not-null="true"/>
+              <generator class="identity"/>
+        </id>
+        
+        
+ 		 <property name="firstName" column="user_firstname" />
+ 		 <property name="lastName" column="user_lastname" /> 
+        <property name="userName" column="user_name"/>
+        <property name="password" column="user_password" />
+        <property name="email" column="user_email" />
+        <property name="mobile" column="user_phone" />
+    </class>
+</hibernate-mapping>
